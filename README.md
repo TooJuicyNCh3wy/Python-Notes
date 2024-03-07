@@ -1,2 +1,2 @@
-# Weclcome to Python
+# Welcome to Python
 learning for Python
