@@ -6,15 +6,7 @@ my_number = 10
 my_name = "Faizan"
 ```
 
-In this example, 
-```
-my_number
-```
-is a variable that holds the value 10, and 
-```
-my_name
-```
-is another variable that holds the value "Faizan". Python understands the type of variable based on the value assigned to it.
+In this example, ```my_number```is a variable that holds the value 10, and ```my_name``` is another variable that holds the value "Faizan". Python understands the type of variable based on the value assigned to it.
 
 Variables can also store different types of data. You can also change the value of a variable after it's been created.
 ```
