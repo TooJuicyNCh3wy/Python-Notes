@@ -34,7 +34,7 @@ Triple quotes can also be used to surround multiline strings, something for whic
 ```
 print("""One
 Two
-Three
+Three""")
 ```
 OUTPUT
 ```
