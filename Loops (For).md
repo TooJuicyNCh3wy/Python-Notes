@@ -47,7 +47,7 @@ Winken
 Blinken
 Nod
 ```
-Using Rhe Range Function with the ```For``` loop
+Using The Range Function with the ```For``` loop
 =================================================
 The loop above prints the name of each fruit in the fruits list.
 
@@ -117,3 +117,65 @@ This code will display the following:
 7
 9
 ```
+
+Using the Target Variable inside the loop
+========================================
+In a for loop, the purpose of the target variable is to reference each item in a sequence of items as the loop iterates. In many situations it is helpful to use the target variable in a calculation or other task within the body of the loop.
+
+For example, suppose you need to write a program that displays the numbers 1 through 10 and their respective squares, in a table similar to the following:
+
+1 = 1
+
+2 = 4
+
+3 = 9
+
+4 = 16
+
+5 = 25
+
+6 = 36
+
+7 = 49
+
+8 = 64
+
+9 = 81
+
+10 = 100
+
+This ca be accomplished by writing a for loop that iterates over the values 1 - 10. During the first iteration, the target variable will be assigned the value 1, during the first iteration, the target variable will be assigned the value 1, during the second iteration it will be assigned the value 2, and so forth. Because the target variable will reference the values one to ten during the loop's execution, you can use it in the calculation inside the loop
+
+As Shown Below
+```
+print('Number\tSquare')
+print('--------------')
+
+for number in range(1, 11):
+    square = number**2
+    print(f'{number}\t{square}')
+```
+OUTPUT
+```
+Number    Square
+------------------
+1            1
+2            4
+3            9
+4            16
+5            25
+6            36
+7            49
+8            64
+9            81
+10           100
+```
+Woah
+Look at line 1
+```
+print('Number\tSquare')
+```
+Notice the ```\t``` command?
+that command is like pressing the tab key, it causes the output cursor to move over the next tab position.This causes the space that you see between the words Number and Square in the sample output. 
+
+The for loop that begins in line 11 uses the range function to produce a sequence containing the numbers 1 through 10. During the first iteration, number will reference 1, during the second iteration number will reference 2, and so forth, up to 10. Inside the loop, the statement in line 12 raises number to the power of 2 and assigns the result to the square variable. The statement in line 13 prints the value referenced by number, tabs over, then prints the value referenced by square. (Tabbing over with the \t escape sequence causes the numbers to be aligned in two columns in the output.)
