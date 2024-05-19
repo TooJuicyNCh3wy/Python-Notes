@@ -180,3 +180,95 @@ that command is like pressing the tab key, it causes the output cursor to move o
 
 The for loop that begins in line 11 uses the range function to produce a sequence containing the numbers 1 through 10. During the first iteration, number will reference 1, during the second iteration number will reference 2, and so forth, up to 10. Inside the loop, the statement in line 12 raises number to the power of 2 and assigns the result to the square variable. The statement in line 13 prints the value referenced by number, tabs over, then prints the value referenced by square. (Tabbing over with the \t escape sequence causes the numbers to be aligned in two columns in the output.)
 
+
+IN THE SPOTLIGHT: Designing a Count-Controlled Loop with the Statement
+======================================================================
+Your friend Amanda just inherited a European sports car from her uncle. Amanda lives in the United States, and she is afraid she will get a speeding ticket because the car’s speedometer indicates kilometers per hour (KPH). She has asked you to write a program that displays a table of speeds in KPH with their values converted to miles per hour (MPH). The formula for converting KPH to MPH is:
+
+**MPH = KPH * 0.6214**
+
+In the formula, MPH is the speed in miles per hour, and KPH is the speed in kilometers per hour. 
+
+The table that your program displays should show speeds from 60 KPH through 130 KPH, in increments of 10, along with their values converted to MPH. The table should look something like this:
+
+KPH    MPH
+
+60     37.3
+
+70     43.5
+
+80     49.7
+
+etc
+
+130    80.8
+
+After thinking about this table of values, you decide that you will write a for loop. The list of values that the loop will iterate over will be the kilometer-per-hour speeds. In the loop, you will call the range function like this: 
+```
+range(60, 131, 10) 
+```
+The first value in the sequence will be 60. Notice the third argument specifies 10 as the step value. This means the numbers in the list will be 60, 70, 80, and so forth. The second argument specifies 131 as the sequence’s ending limit, so the last number in the sequence will be 130.
+
+Inside the loop, You will use the target to calculate a speed in miles per hour
+Shown Below
+
+```
+START_SPEED = 60
+END_SPEED = 131
+INCREMENT = 10
+CONVERSION_FACTOR = 0.6214
+
+print('KPH\tMPH')
+print('-----------')
+
+for kph in range(START_SPEED, END_SPEED, INCREMENT):
+    mph = kph * CONVERSION_FACTOR
+    print(f'{kph}\t{mph.1f}')
+```
+OUTPUT
+```
+KPH    MPH
+-----------
+60    37.3
+70    43.5
+80    49.7
+90    55.9
+100   62.1
+110   68.4
+120   74.6
+130   80.8
+```
+Letting the User Control the Loop Iterations
+=============================================
+n many cases, the programmer knows the exact number of iterations that a loop must perform. 
+Sometimes, the programmer needs to let the user control the number of times that a loop iterates. remember from (Using the Target Variable inside the loop) code, if you want it to be a bit more versitile by allowing the user to specify the maximum value displayed by the loop?
+This code below shows how you can accomplish this
+```
+print('This program displays a list of numbers')
+print('Starting at 1) and their squares.')
+end = int(input('How high should i go? '))
+
+print()
+print('Number\tSquare')
+print('--------------')
+
+for number in range(1, end + 1):
+    square = number**2
+print(f'{number}\t{squre}')
+```
+
+Generating an Iterable that Ranges from Lowest to Highest 
+=========================================================
+from the codes that youve seen here, The ```range``` function was used to generate a sequence with numbers that go from lowest to highest. Alternatively, you can use the range function to generate sequences of numbers that go from highest to lowest.
+Shown below: vvv
+```
+range(10,0,-1)
+```
+in this function call, the starting value is 10, the sequence's ending limit is 0. and the Step value is -1. this expression will produce the following sequence:
+```
+10,9,8,7,6,5,4,3,2,1
+```
+Heres an example of a for loop that prints the numbers 5 DOWN to 1:
+```
+for num in range(5,0.-1):
+    print(num)
