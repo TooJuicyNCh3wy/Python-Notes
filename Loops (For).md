@@ -179,3 +179,4 @@ Notice the ```\t``` command?
 that command is like pressing the tab key, it causes the output cursor to move over the next tab position.This causes the space that you see between the words Number and Square in the sample output. 
 
 The for loop that begins in line 11 uses the range function to produce a sequence containing the numbers 1 through 10. During the first iteration, number will reference 1, during the second iteration number will reference 2, and so forth, up to 10. Inside the loop, the statement in line 12 raises number to the power of 2 and assigns the result to the square variable. The statement in line 13 prints the value referenced by number, tabs over, then prints the value referenced by square. (Tabbing over with the \t escape sequence causes the numbers to be aligned in two columns in the output.)
+
